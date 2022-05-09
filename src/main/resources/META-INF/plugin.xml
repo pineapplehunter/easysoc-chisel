@@ -26,6 +26,7 @@
         <internalFileTemplate name="Chisel Test"/>
 
         <moduleType id="CHISEL_MODULE" implementationClass="org.easysoc.plugins.chisel.module.ChiselModuleType"/>
+        <moduleBuilder builderClass="org.easysoc.plugins.chisel.module.ChiselModuleBuilder"/>
         <projectTemplate projectType="CHISEL_MODULE" templatePath="projectTemplates/Empty_Chisel_Project.zip"/>
         <projectTemplate projectType="CHISEL_MODULE" templatePath="projectTemplates/Empty_Scala_Project.zip"/>
         <projectTemplate projectType="CHISEL_MODULE" templatePath="projectTemplates/GCD_Example_With_ChiselTest.zip"/>
@@ -37,15 +38,17 @@
         <group id="HDL" text="H_DL" popup="true" description="Hardware design language tools and utilities">
             <add-to-group group-id="MainMenu" anchor="after" relative-to-action="ToolsMenu"/>
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
-            <add-to-group group-id="ProjectViewPopupMenu" anchor="before" relative-to-action="ProjectViewPopupMenuRefactoringGroup"/>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="before"
+                          relative-to-action="ProjectViewPopupMenuRefactoringGroup"/>
             <action id="OpenChiselDocAction" class="org.easysoc.plugins.chisel.actions.OpenChiselDocAction"
-                    text="Search Chisel API Documentation" description="Open/Search Chisel API documentation" />
+                    text="Search Chisel API Documentation" description="Open/Search Chisel API documentation"/>
             <action id="OpenFirrtlDocAction" class="org.easysoc.plugins.chisel.actions.OpenFirrtlDocAction"
-                    text="Search Firrtl API Documentation" description="Open/Search Firrtl API documentation" />
+                    text="Search Firrtl API Documentation" description="Open/Search Firrtl API documentation"/>
             <action id="OpenTestDocAction" class="org.easysoc.plugins.chisel.actions.OpenTestDocAction"
-                    text="Search ChiselTest API Documentation" description="Open/Search ChiselTest API documentation" />
+                    text="Search ChiselTest API Documentation" description="Open/Search ChiselTest API documentation"/>
             <action id="OpenStackOverflowAction" class="org.easysoc.plugins.chisel.actions.OpenStackOverflowAction"
-                    text="Search Chisel Questions on Stack Overflow" description="Open/Search Chisel questions on stack overflow" />
+                    text="Search Chisel Questions on Stack Overflow"
+                    description="Open/Search Chisel questions on stack overflow"/>
         </group>
 
         <action id="CreateChiselModuleAction" class="org.easysoc.plugins.chisel.actions.CreateChiselModuleAction">
@@ -56,6 +59,7 @@
         </action>
     </actions>
     <projectListeners>
-        <listener class="org.easysoc.plugins.chisel.listeners.ProjectListener" topic="com.intellij.openapi.project.ProjectManagerListener"/>
+        <listener class="org.easysoc.plugins.chisel.listeners.ProjectListener"
+                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </projectListeners>
 </idea-plugin>

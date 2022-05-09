@@ -1,10 +1,11 @@
 ## Chisel plugin for IntelliJ platform
 
 ### Features
-
+<!-- Plugin description -->
 - Create new Chisel project based on projectWizard and templates
 - Create Chisel module and test from fileTemplates
 - Open/Search Chisel/Firrtl API Documentation
+<!-- Plugin description end -->
 
 ![](images/chisel.png)
 
