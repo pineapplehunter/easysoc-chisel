@@ -29,7 +29,7 @@ public class ChiselModuleSettingStep extends ModuleWizardStep {
 
   private final String SBT_IMPORT = "sbt.shell.import";
   private final String SBT_BUILD = "sbt.shell.build";
-  
+
   private final PropertiesComponent settings = PropertiesComponent.getInstance();
 
   // in ChiselModuleSettingStep.form

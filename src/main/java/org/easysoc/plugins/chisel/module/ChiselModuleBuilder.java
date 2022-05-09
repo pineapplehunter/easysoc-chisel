@@ -16,7 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JComponent;
 import javax.swing.SwingConstants;
 
-public class ChiselModuleBuilder extends JavaModuleBuilder {
+public class ChiselModuleBuilder extends ModuleBuilder {
 
     private SettingsStep mySettingsStep;
 
@@ -46,7 +46,7 @@ public class ChiselModuleBuilder extends JavaModuleBuilder {
 
     @Override
     public boolean isSuitableSdkType(SdkTypeId sdk) {
-        return sdk == .getInstance();
+        return sdk == JavaSdk.getInstance();
     }
 
     // fix setTemplatesList in ProjectTypeStep
@@ -87,6 +87,6 @@ public class ChiselModuleBuilder extends JavaModuleBuilder {
 
     @Override
     public ModuleWizardStep[] createWizardSteps(@NotNull WizardContext wizardContext, @NotNull ModulesProvider modulesProvider) {
-        return new ModuleWizardStep[]{new ChiselModuleSettingStep(this)};
+        return new ModuleWizardStep[]{new ChiselModuleSettingStep(wizardContext)};
     }
 }
